@@ -1,6 +1,19 @@
 import Nav from "./Nav";
 import styled from "styled-components";
 import Link from "next/link";
+import Router from "next/router";
+import NProgress from "nprogress";
+
+// Listen for onRoute changes
+Router.onRouteChangeStart = () => {
+  NProgress.start();
+};
+Router.onRouteChangeComplete = () => {
+  NProgress.done();
+};
+Router.onRouteChangeError = () => {
+  console.log("onRouteChangeError Triggered");
+};
 
 const Header = () => (
   <StyledHeader>
