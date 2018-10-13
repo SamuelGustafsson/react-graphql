@@ -8,8 +8,9 @@ class MyApp extends App {
 
     return (
       <Container>
-        <Page />
-        <Component />
+        <Page>
+          <Component />
+        </Page>
       </Container>
     );
   }
