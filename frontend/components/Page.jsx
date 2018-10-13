@@ -12,17 +12,29 @@ const theme = {
   maxWidth: "1000px",
   boxShadow: "0 12px 24px 0 rgba(0,0,0,0.09)"
 };
+
 class Page extends Component {
   render() {
     return (
       <ThemeProvider theme={theme}>
+        <StyledPage>
           <Meta />
           <Header />
-        <p>Im the page component</p>
+          <Inner>{this.props.children}</Inner>
         </StyledPage>
       </ThemeProvider>
     );
   }
 }
 
+const StyledPage = styled.div`
+  background: white;
+  color: ${props => props.theme.black};
+`;
+
+const Inner = styled.div`
+  max-width: ${props => props.theme.maxWidth};
+  margin: 0 auto;
+  padding: 2rem;
+`;
 export default Page;
