@@ -1,6 +1,6 @@
 import Nav from "./Nav";
-import Link from "next/link";
 import styled from "styled-components";
+import Link from "next/link";
 
 const Header = () => (
   <StyledHeader>
