@@ -1,6 +1,7 @@
 import { injectGlobal } from "styled-components";
 
-const globalStyles = () => injectGlobal`
+// Takes theme as a prop so we can use it inside the injectGlobal for globalstyling.
+const globalStyles = theme => injectGlobal`
 
 /* import custom font */
 @font-face {
@@ -21,7 +22,16 @@ html {
 body {
   padding: 0;
   margin: 0;
+
+  /* Set fontsize to eqivalent 15px */
+  font-size: 1.5rem;
+  line-height: 2;
   font-family: "radnika_next";
+}
+
+a {
+  text-decoration: none;
+color: ${theme.black};
 }
 `;
 

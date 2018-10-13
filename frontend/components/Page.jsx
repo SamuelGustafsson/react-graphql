@@ -4,7 +4,8 @@ import Header from "./Header";
 import Meta from "./Meta";
 import { globalStyles, theme } from "../style";
 
-globalStyles();
+// Takes theme as a prop so we can use it inside the injectGlobal for globalstyling.
+globalStyles(theme);
 
 class Page extends Component {
   render() {
