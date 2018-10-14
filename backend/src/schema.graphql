@@ -1,10 +1,17 @@
 # This is whats shaping our client schema, this file is specifying what is going to be possible to reach from the webclient
 
+# import * from './generated/prisma.graphql'
 
 type Mutation {
-
+  createItem(
+    title: String
+    description: String
+    price: Int
+    image: String
+    largeImage: String
+  ): Item!
 }
 
 type Query {
-
+  items: [Item]!
 }
