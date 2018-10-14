@@ -1,9 +1,10 @@
 endpoint: ${env:PRISMA_ENDPOINT}
-datamodel: datamodel.prisma
+datamodel: datamodel.graphql
 # This lockdowns the database
 # TODO: Outcomment this when pushing this to production
 # secret: ${env:PRISMA_SECRET}
 
+# Retreives schema after we deploy it, Prisma creates a API after the data
 hooks:
   post-deploy:
     - graphql get-schema -p prisma

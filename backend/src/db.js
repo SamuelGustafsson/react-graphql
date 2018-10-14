@@ -4,8 +4,8 @@ const { Prisma } = require("prisma-binding");
 
 const db = new Prisma({
   // Is all the prisma data type ( type Query in prisma.graphwl )
-  typeDefs: "./generated/prisma.graphql",
-  endpoint: process.env.PRISMA_ENDPOINT,
+  typeDefs: "src/generated/prisma.graphql",
+  endpoint: "https://eu1.prisma.sh/samuel-gustafsson/sick-fits/dev",
   secret: process.env.PRISMA_SECRET,
   debug: true
 });
