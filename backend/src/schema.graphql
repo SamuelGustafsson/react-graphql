@@ -1,13 +1,10 @@
-# This is whats shaping your schema, this file is specifying what is going to be possible to reach from the client
+# This is whats shaping our client schema, this file is specifying what is going to be possible to reach from the webclient
 
-type Dog {
-  name: String!
-}
 
 type Mutation {
-  createDog(name: String!): Dog
+
 }
 
 type Query {
-  dogs: [Dog]!
+
 }
