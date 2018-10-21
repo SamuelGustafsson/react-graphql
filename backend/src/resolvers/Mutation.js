@@ -1,6 +1,6 @@
 const Mutations = {
   async createItem(parent, args, context, info) {
-    // TODO: Check if they are signed
+    // TODO: Check if user are authenticaded
 
     const item = await context.db.mutation.createItem(
       {
@@ -10,6 +10,7 @@ const Mutations = {
       },
       info
     );
+    console.log("CREATED A ITEM!", item);
     return item;
   }
 };
