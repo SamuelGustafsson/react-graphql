@@ -9,7 +9,7 @@ class MyApp extends App {
     // This is a must when doing a server rendered app.
     let pageProps = {};
     if (Component.getInitialProps) {
-      pageProps = await Component.this.getInitialProps(ctx);
+      pageProps = await Component.getInitialProps(ctx);
     }
 
     // This exposes the query to the user
